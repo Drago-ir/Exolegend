@@ -6,9 +6,9 @@
 
 - Connectez vous à [https://gitlab.com](https://gitlab.com) à l'aide de votre compte personnel. 
 - Rendez vous sur la page : [https://gitlab.com/exolegend/exolegend](https://gitlab.com/exolegend/exolegend).
-- Cliquez sur le bouton "fork" afin de créer forker le projet dans un repository privée. ![How to fork 1](./images/readme_fork_1.jpg)
-- Paramétre votre fork avec un nom, le dossier dans lequel le ranger, n'oubliez pas de mettre votre repository en privée pour ne pas divulguer votre code ! Confirmez ensuite le fork. ![How to fork 2](./images/readme_fork_2.jpg)
-- Un nouveau repository privée se trouvera a présent dans votre liste de repository. Clonez ensuite ce repository en local sur votre machine. ![How to fork 3](./images/readme_fork_3.jpg)
+- Cliquez sur le bouton "fork" afin de créer forker le projet dans un repository privée. ![How to fork 1](./docs/images/readme_fork_1.jpg)
+- Paramétre votre fork avec un nom, le dossier dans lequel le ranger, n'oubliez pas de mettre votre repository en privée pour ne pas divulguer votre code ! Confirmez ensuite le fork. ![How to fork 2](./docs/images/readme_fork_2.jpg)
+- Un nouveau repository privée se trouvera a présent dans votre liste de repository. Clonez ensuite ce repository en local sur votre machine. ![How to fork 3](./docs/images/readme_fork_3.jpg)
 ```
 $ git clone git@gitlab.com:User/exolegend-oh-my-strategy.git
   Cloning into 'exolegend-oh-my-strategy'...
@@ -29,7 +29,7 @@ $ git remote add upstream git@gitlab.com:exolegend/exolegend.git
 
 - Connectez vous à [https://gitlab.com](https://gitlab.com) à l'aide de votre compte personnel.
 - Rendez vous sur la page : [https://gitlab.com/exolegend/exolegend](https://gitlab.com/exolegend/exolegend).
-- Clonez ce repository en local sur votre machine. ![How to clone 1](./images/readme_clone_1.jpg)
+- Clonez ce repository en local sur votre machine. ![How to clone 1](./docs/images/readme_clone_1.jpg)
 ```
 $ git clone git@gitlab.com:exolegend/exolegend.git
   Cloning into 'exolegend-oh-my-strategy'...
