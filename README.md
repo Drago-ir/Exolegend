@@ -19,7 +19,7 @@ $ git clone git@gitlab.com:User/exolegend-oh-my-strategy.git
   remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
   Receiving objects: 100% (3/3), done.
 ```
-- Ajoutez en remote repository la classe mère : "upstream" pour les mises à jour.
+- Ajoutez le lien : "upstream" du repository d'exolegend pour les mises à jour.
 ```
 $ cd exolegend-oh-my-strategy
 $ git remote add upstream git@gitlab.com:exolegend/exolegend.git
@@ -29,8 +29,32 @@ $ git remote add upstream git@gitlab.com:exolegend/exolegend.git
 
 - Connectez vous à [https://gitlab.com](https://gitlab.com) à l'aide de votre compte personnel.
 - Rendez vous sur la page : [https://gitlab.com/exolegend/exolegend](https://gitlab.com/exolegend/exolegend).
-- Cliquez
+- Clonez ce repository en local sur votre machine. ![How to clone 1](./images/readme_clone_1.jpg)
+```
+$ git clone git@gitlab.com:exolegend/exolegend.git
+  Cloning into 'exolegend-oh-my-strategy'...
+  Enter passphrase for key '/home/user/.ssh/private_id_rsa':
+  remote: Enumerating objects: 3, done.
+  remote: Counting objects: 100% (3/3), done.
+  remote: Compressing objects: 100% (2/2), done.
+  remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+  Receiving objects: 100% (3/3), done.
+```
+- Ajoutez le lien : "upstream" du repository d'Exolegend pour les mises à jour.
+```
+$ cd exolegend-oh-my-strategy
+$ git remote add upstream git@gitlab.com:exolegend/exolegend.git
+```
 
-## Getting started
+## Mise à jour
+
+- Pour récupérer les mises à jour entrez la commande : `$ git fetch upstream`.
+- Pour mettre à jour votre branche de travail, mergez le tag : `RELEASE_X` : `$ git merge RELEASE_X`. (La disponibilité des tags seront communiqué lors de leur sortie)
+
+## Dépendances
+
+TO DO
+
+## Par où commencer ?
 
 TO DO
