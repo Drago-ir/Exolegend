@@ -1,0 +1,24 @@
+{
+    "name": "gladiator_x86",
+    "version": "0.0.1",
+    "description": "Gladiator",
+    "homepage": "https://exolegend.com",
+	"platforms": [
+        "native"
+    ],
+    "build": {
+        "flags": [
+            "-L.",
+            "-llibgladiator_x86.a"
+        ]
+    },
+	"dependencies": [
+		{
+			"name": "hw_x86",
+			"version": "symlink://./lib/gladiator_x86/hw_x86",
+			"platforms": ["native"]
+		}
+		
+		
+	]
+}

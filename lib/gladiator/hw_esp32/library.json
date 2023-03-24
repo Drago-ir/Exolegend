@@ -1,0 +1,22 @@
+{
+    "name": "hw_esp32",
+    "version": "0.0.1",
+    "description": "hw_esp32",
+    "homepage": "https://exolegend.com",
+	"platforms": [
+        "espressif32"
+    ],
+    "build": {
+        "flags": [
+            "-L.",
+            "-llibhw_esp32.a"
+        ]
+    },
+	"dependencies": [
+		{
+			"name": "hw_generic",
+			"version": "symlink://./lib/gladiator/hw_generic"
+		}
+		
+	]
+}

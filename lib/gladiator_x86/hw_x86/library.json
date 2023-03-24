@@ -1,0 +1,26 @@
+{
+    "name": "hw_x86",
+    "version": "0.0.1",
+    "description": "hw_x86",
+    "homepage": "https://exolegend.com",
+	"platforms": [
+        "native"
+    ],
+    "build": {
+        "flags": [
+            "-L.",
+            "-llibhw_x86.a"
+        ]
+    },
+	"dependencies": [
+		{
+			"name": "hw_generic",
+			"version": "symlink://./lib/gladiator_x86/hw_generic",
+            "platforms" : ["native"]
+		},
+		{
+			"name": "sio-client",
+			"platforms": ["native"]
+		}
+	]
+}
