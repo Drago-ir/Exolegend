@@ -53,10 +53,10 @@ $ git remote add upstream git@gitlab.com:exolegend/exolegend.git
 
 ## Dépendances
 
-- Téléchargez les dernières versions du simulateur : "exolegend-virtuals\_1.8.0.zip" et du debugger : "XXXX" dans la liste : [http://exolegend.exolab:8080/](http://exolegend.exolab:8080/)
+- Téléchargez les dernières versions du simulateur : "exolegend-virtuals\_1.8.1.zip" et du debugger : "XXXX" dans la liste : [http://exolegend.exolab:8080/](http://exolegend.exolab:8080/)
 - [ALTERNATIVE 1] : Si vous êtes connecté sur une connexion exterieur vous pouvez télécharger les archives via ce lien : XXXXX
 - [ALTERNATIVE 2] : Si vous ne parvenez pas à récupérer l'archive, demandez à l'un des coachs de vous fournir une clé USB.
-- Décompressez les dossiers "exolegend-virtuals\_1.8.0" et "XXXX" à la racine de votre repository.
+- Décompressez les dossiers "exolegend-virtuals\_1.8.1" et "XXXX" à la racine de votre repository.
 
 ## Par où commencer ?
 
