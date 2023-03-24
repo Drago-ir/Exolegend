@@ -1,0 +1,15 @@
+{
+    "name": "espcore_x86",
+    "version": "0.0.1",
+    "description": "espcore_x86",
+    "homepage": "https://exolegend.com",
+    "platforms": [
+        "native"
+    ],
+    "build": {
+        "flags": [
+            "-L.",
+            "-llibespcore_x86.a"
+        ]
+    }
+}

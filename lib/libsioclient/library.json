@@ -1,0 +1,16 @@
+{
+    "name": "libsioclient",
+    "version": "b10474e3eaa6b27e75dbc1382ac9af74fdf3fa85",
+    "description": "libsioclient",
+    "homepage": "https://github.com/socketio/socket.io-client-cpp",
+    "platforms": [
+        "native"
+    ],
+    "build": {
+        "flags": [
+            "-L.",
+            "-llibsioclient.a"
+        ]
+    }
+
+}

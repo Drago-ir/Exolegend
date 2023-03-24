@@ -1,0 +1,29 @@
+{
+    "name": "gladiator",
+    "version": "0.0.1",
+    "description": "Gladiator",
+    "homepage": "https://exolegend.com",
+	"platforms": [
+        "espressif32"
+    ],
+    "build": {
+        "flags": [
+            "-L.",
+            "-llibgladiator.a"
+        ]
+    },
+	"dependencies": [
+		
+		{
+			"name": "WiFi",
+			"platforms": ["espressif32"]
+		},
+		{
+			"name": "hw_esp32",
+			"version": "symlink://./lib/gladiator/hw_esp32",
+			"platforms": ["espressif32"]
+		}
+		
+		
+	]
+}
