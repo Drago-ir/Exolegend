@@ -1,5 +1,10 @@
 # Exolegend
 
+## Guide d'assemblage
+Vous retrouverez le guide d'assemblage ici: [http://192.168.98.211:8080/](http://192.168.98.211:8080/)
+(Fichier `C - 034096-1 guide d'assemblage GLADIATOR.zip`)
+
+
 ## Installation
 
 ### [Option A] Création d'un repository dédié via un fork sur GitLab
