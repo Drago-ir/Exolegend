@@ -302,14 +302,13 @@ void on_target_tile(){
     int selectedIndex;
     AStarNode buffNode = AStarNode(node, nullptr, 0, true);
     buffNode.killAllRobotExceptOneTakingTurn();
-    std::tie(std::ignore, selectedIndex) = buffNode.runAStar(2000);
+    std::tie(std::ignore, selectedIndex) = buffNode.runAStar();
     //cout << "Target reached" << endl;
     //if A star returns no solution, move to center
     if (selectedIndex == -1){
         cout << "Astar did not find a solution." << endl;
         int goraneLocationI, goraneLocationJ;
         std::tie(goraneLocationI,goraneLocationJ) = inverseMazeLocation(node.teams[GORANE_TEAM].robots[GORANE1_INDEX].location);
-        cout << "Gladiator is in I: " <<  goraneLocationI << " and J: " << goraneLocationJ << endl;
         int absI = abs(7-goraneLocationI);
         int absJ = abs(7-goraneLocationJ);
         if (absI > absJ){
@@ -383,9 +382,9 @@ void mov_servo(){
     if(delta_time > 2000){
         init_weapon_time = millis(); 
     }else if(delta_time > 1000){
-        gladiator->weapon->setTarget(WeaponPin::M1, 40);
+        gladiator->weapon->setTarget(WeaponPin::M1, 60);
     }else{
-        gladiator->weapon->setTarget(WeaponPin::M1, 145);
+        gladiator->weapon->setTarget(WeaponPin::M1, 120);
     }
     
 

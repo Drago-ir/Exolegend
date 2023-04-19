@@ -38,7 +38,6 @@ unsigned char score;
 MazeSquare nearestSquare;
 RobotData robot_data;
 wp wp_next_corner;
-unsigned long init_weapon_time; 
 
 Node node;
 bool itsMyFirstTime = true;
@@ -53,13 +52,6 @@ void setup() {
     cout << "GAME START!" << endl;
     maze_size = gladiator->maze->getSize();
     square_size = gladiator->maze->getSquareSize();
-    gladiator->weapon->initWeapon(WeaponPin::M1, WeaponMode::SERVO);
-    init_weapon_time = millis();
-    gladiator->weapon->setTarget(WeaponPin::M1, 80);
-    delay(500);
-    gladiator->weapon->setTarget(WeaponPin::M1, 100);
-    delay(500);
-    gladiator->weapon->setTarget(WeaponPin::M1, 90);
 
 }
 
@@ -302,14 +294,13 @@ void on_target_tile(){
     int selectedIndex;
     AStarNode buffNode = AStarNode(node, nullptr, 0, true);
     buffNode.killAllRobotExceptOneTakingTurn();
-    std::tie(std::ignore, selectedIndex) = buffNode.runAStar(2000);
+    std::tie(std::ignore, selectedIndex) = buffNode.runAStar();
     //cout << "Target reached" << endl;
     //if A star returns no solution, move to center
     if (selectedIndex == -1){
         cout << "Astar did not find a solution." << endl;
         int goraneLocationI, goraneLocationJ;
         std::tie(goraneLocationI,goraneLocationJ) = inverseMazeLocation(node.teams[GORANE_TEAM].robots[GORANE1_INDEX].location);
-        cout << "Gladiator is in I: " <<  goraneLocationI << " and J: " << goraneLocationJ << endl;
         int absI = abs(7-goraneLocationI);
         int absJ = abs(7-goraneLocationJ);
         if (absI > absJ){
@@ -371,30 +362,11 @@ void reset() {
     //fonction de reset:
     //initialisation de toutes vos variables avant le début d'un match
     gladiator->log("Appel de la fonction de reset");
-    gladiator->weapon->setTarget(WeaponPin::M1, 90);
-    delay(500);
-    gladiator->weapon->setTarget(WeaponPin::M1, 180);
-
-}
-
-void mov_servo(){
-    
-    unsigned long delta_time = millis() - init_weapon_time;
-    if(delta_time > 2000){
-        init_weapon_time = millis(); 
-    }else if(delta_time > 1000){
-        gladiator->weapon->setTarget(WeaponPin::M1, 40);
-    }else{
-        gladiator->weapon->setTarget(WeaponPin::M1, 145);
-    }
-    
 
 }
 
 void loop() {
     if(gladiator->game->isStarted()){
-
-        mov_servo();
 
         unsigned long startTimeInLoop = micros();
 
